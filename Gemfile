@@ -42,3 +42,4 @@ gem 'spring',        group: :development
 
 gem 'grape'
 gem "rest-client"
+gem 'devise'
