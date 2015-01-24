@@ -20,7 +20,8 @@ module V1
 					age: params[:age],
 					gender: params[:gender],
 					status: params[:status],
-					birth_date: params[:birth_date]
+					birth_date: params[:birth_date],
+					encrypted_password: params[:password]
 					})
 			end
 
@@ -31,7 +32,8 @@ module V1
 					age: params[:age],
 					gender: params[:gender],
 					status: params[:status],
-					birth_date: params[:birth_date])
+					birth_date: params[:birth_date],
+					encrypted_password: params[:password])
 			end
 
 			desc 'Delete user'
