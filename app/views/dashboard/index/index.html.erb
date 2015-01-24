@@ -1,0 +1,19 @@
+<div class="large-12">
+	<div class="large-12">
+		<h3>Latest Announcements</h3>
+		<div class="panel">
+			<% @announcements.each do |announcement| %>
+			 <ul>
+			 	<li>
+			 		<h5><%= announcement.title %></h5>
+			 		<p><%= truncate(announcement.description, :length => 140) %></p>
+			 	</li>
+			 </ul>
+			<% end %>
+		</div>
+	</div>
+	<div class="large-12">
+		<h3>Latest Report</h3>
+		<canvas height="450" id="canvas" width="950"></canvas>
+	</div>
+</div>
