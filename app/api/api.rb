@@ -5,4 +5,5 @@ class API < Grape::API
 
 	mount API::V1::Users
 	mount API::V1::HEALTHCARE::Consultations
+	mount API::V1::HEALTHCARE::Hospitals
 end
