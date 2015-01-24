@@ -1,0 +1,22 @@
+<%= form_for [:dashboard,@announcement] do |f| %>
+  <% if @announcement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@announcement.errors.count, "error") %> prohibited this announcement from being saved:</h2>
+
+      <ul>
+      <% @announcement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <%= f.text_field :title, :placeholder => 'Title' %>
+  </div>
+  <div class="row">
+    <%= f.text_area :description, :placeholder => 'Description', :rows => 10 %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class => 'button button-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+<div class="large-12">
+  <h3>Announcements</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @announcements.each do |announcement| %>
+        <tr>
+          <td><%= announcement.title %></td>
+          <td><%= truncate(announcement.description, :length => 15) %></td>
+          <td><%= link_to 'Show', dashboard_announcement_path(announcement) %></td>
+          <td><%= link_to 'Edit', edit_dashboard_announcement_path(announcement) %></td>
+          <td><%= link_to 'Destroy', dashboard_announcement_path(announcement), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Announcement', new_dashboard_announcement_path %>
+</div>
