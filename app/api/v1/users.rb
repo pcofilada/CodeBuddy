@@ -21,7 +21,9 @@ module V1
 					gender: params[:gender],
 					status: params[:status],
 					birth_date: params[:birth_date],
-					encrypted_password: params[:password]
+					encrypted_password: params[:password],
+					baranggay_id: params[:baranggay],
+					role_id: params[:role]
 					})
 			end
 
@@ -33,7 +35,10 @@ module V1
 					gender: params[:gender],
 					status: params[:status],
 					birth_date: params[:birth_date],
-					encrypted_password: params[:password])
+					encrypted_password: params[:password],
+					baranggay_id: params[:baranggay],
+					role_id: params[:role]
+					)
 			end
 
 			desc 'Delete user'
