@@ -47,10 +47,17 @@ GEM
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.2.2)
+<<<<<<< HEAD
     foundation-rails (5.5.0.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0, < 3.4)
     grape (0.9.0)
+=======
+    foundation-rails (5.4.3.1)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
+    grape (0.10.1)
+>>>>>>> index
       activesupport
       builder
       hashie (>= 2.1.0)
@@ -132,7 +139,7 @@ GEM
     uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    virtus (1.0.3)
+    virtus (1.0.4)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
@@ -143,7 +150,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+<<<<<<< HEAD
   foundation-rails
+=======
+  foundation-rails (= 5.4.3.1)
+>>>>>>> index
   grape
   jbuilder (~> 2.0)
   jquery-rails
