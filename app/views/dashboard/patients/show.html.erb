@@ -1,0 +1,59 @@
+<div class="large-12">
+	<h3>Patients Information</h3>
+	<div class="row">
+		<div class="large-4 columns">First Name:</div>
+		<div class="large-8 columns"><%= @patient.user.first_name %></div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">Last Name:</div>
+		<div class="large-8 columns"><%= @patient.user.last_name %></div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">Email:</div>
+		<div class="large-8 columns"><%= @patient.user.email %></div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">Birth Date:</div>
+		<div class="large-8 columns"><%= @patient.user.birth_date %></div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">Age:</div>
+		<div class="large-8 columns"><%= @patient.user.age %></div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">Gender:</div>
+		<div class="large-8 columns"><%= @patient.user.gender %></div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">Status:</div>
+		<div class="large-8 columns"><%= @patient.user.status %></div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">Mobile Number:</div>
+		<div class="large-8 columns"><%= @patient.user.contact_number %></div>
+	</div>
+
+	<h4>Consultation History</h4>
+	  <table>
+	    <thead>
+	      <tr>
+	        <th>Consultation Date</th>
+	        <th>Doctor</th>
+	        <th>Description/Findings</th>
+	      </tr>
+	    </thead>
+
+	    <tbody>
+	      <% @consultations.each do |consultation| %>
+	        <tr>
+	          <td><%= consultation.consultation_date.to_date %></td>
+	          <td><%= consultation.doctor_name %></td>
+	          <td><%= consultation.description %></td>
+	        </tr>
+	      <% end %>
+	    </tbody>
+	  </table>
+
+	<%= link_to 'Edit', edit_dashboard_patient_path(@patient) %> |
+	<%= link_to 'Back', dashboard_patients_path %>
+</div>

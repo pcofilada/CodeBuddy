@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
   	get '', to: 'index#index', as: '/'
+  	resources :patients
   	resources :announcements
   end
 
