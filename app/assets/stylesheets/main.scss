@@ -1,0 +1,55 @@
+.front {
+	background: asset_url('bg.png');
+	background-size: cover;
+	height: 100%;
+
+	.logo {
+		img {
+			margin: 0 auto;
+			display: block;
+			padding: 80px 0 40px;
+		}
+	}
+
+	.large-8.container.clearfix {
+		margin: 40px auto 20px;
+		text-align: center;
+
+		.icons {
+			padding: 20px 0;
+			background: red;
+			margin: 5px;
+			min-height: 169px;
+			width: 32.2%;
+			label {
+				font-size: 25px;
+				color: #FFF;
+			}
+		}
+
+		.tourism {
+			background: #67C3AE;
+			border-radius: 10px;
+		}
+
+		.healthcare {
+			background: #DB1931;
+			border-radius: 10px;
+		}
+
+		.education {
+			background: #78C1DD;
+			border-radius: 10px;
+		}
+
+		.disaster {
+			background: #F79323;
+			border-radius: 10px;
+		}
+
+		.employment {
+			background: #4E666A;
+			border-radius: 10px;
+		}
+	}
+}
