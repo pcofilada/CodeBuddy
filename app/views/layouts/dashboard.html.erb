@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Codebuddy</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="dashboard">
+
+<div class="sidebar large-3 columns">
+	<div class="logo">
+		<%= image_tag('logo.png') %>
+	</div>
+	<div class="department">
+		<%= image_tag('healthcare.png') %>
+		<label>Healthcare</label>
+	</div>
+	<ul>
+		<li><a href="">PATIENTS</a></li>
+		<li><a href="">ANNOUNCEMENTS</a></li>
+		<li><a href="">SETTINGS</a></li>
+	</ul>
+</div>
+<div class="main large-9 columns">
+	<div class="large-12 clearfix">
+		<div class="right">
+			Hiya, <%= current_user.first_name %> !
+			<a href="#"></a>
+		</div>
+	</div>
+	<%= yield %>
+</div>
+</body>
+</html>
