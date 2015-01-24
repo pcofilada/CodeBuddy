@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  station_name: MyString
+  contact_number: MyString
+  landline: MyString
+  fire_marshal: MyString
+
+two:
+  station_name: MyString
+  contact_number: MyString
+  landline: MyString
+  fire_marshal: MyString

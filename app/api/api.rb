@@ -7,6 +7,10 @@ class API < Grape::API
 		Pnp.all
 	end
 
+	get 'bfp' do
+		Bfp.all
+	end
+
 	mount API::V1::Users
 	mount API::V1::HEALTHCARE::Consultations
 	mount API::V1::HEALTHCARE::Hospitals
