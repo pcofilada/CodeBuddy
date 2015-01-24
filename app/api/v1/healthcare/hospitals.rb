@@ -17,7 +17,9 @@ module V1
 				post 'new' do
 					Hospital.create!({
 						name: params[:name],
-						rhu_code: params[:rhu_code]
+						rhu_code: params[:rhu_code],
+						address: params[:address],
+						primary_contact_number: params[:primary_contact_number]
 						})
 				end
 
@@ -25,7 +27,9 @@ module V1
 				put ':hospital' do
 					Hospital.find(params[:hospital]).update(
 						name: params[:name],
-						rhu_code: params[:rhu_code]
+						rhu_code: params[:rhu_code],
+						address: params[:address],
+						primary_contact_number: params[:primary_contact_number]
 						)
 				end
 
