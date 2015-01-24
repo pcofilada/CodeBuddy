@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   	end
   	resources :announcements
     get 'export'
+    get 'notify'
   end
 
   mount API => '/'
