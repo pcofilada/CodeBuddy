@@ -109,4 +109,21 @@
 			}
 		}
 	}
+
+	.main {
+		.header {
+			.right {
+				font-size: 20px;
+				padding: 23px;
+				position: relative;
+				a {
+					&.logout {
+						position: absolute;
+						right: 25px;
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }

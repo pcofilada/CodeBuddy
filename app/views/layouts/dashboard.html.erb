@@ -24,10 +24,11 @@
 	</ul>
 </div>
 <div class="main large-9 columns">
-	<div class="large-12 clearfix">
+	<div class="header large-12 clearfix">
 		<div class="right">
 			Hiya, <%= current_user.first_name %> !
-			<a href="#"></a>
+			<a href="#" class="show-logout"><i class="fa fa-angle-down"></i></a>
+			<%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'logout' %>
 		</div>
 	</div>
 	<%= yield %>

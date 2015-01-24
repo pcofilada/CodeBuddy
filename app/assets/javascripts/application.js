@@ -17,3 +17,9 @@
 //= require_tree .
 //= require foundation
 $(document).foundation();
+
+$(document).ready(function(){
+	$('.show-logout').on('click', function(){
+		$('.logout').toggle();
+	});
+});
