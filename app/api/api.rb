@@ -3,4 +3,5 @@ class API < Grape::API
 	version 'v1'
 	default_format :json
 
+	mount API::V1::Users
 end
