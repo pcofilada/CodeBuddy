@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
   	get '', to: 'index#index', as: '/'
-  	resources :patients
+  	resources :patients do
+  		resources :consultations
+  	end
   	resources :announcements
+    get 'export'
   end
 
   mount API => '/'
