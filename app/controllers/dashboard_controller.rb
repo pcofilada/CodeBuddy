@@ -24,7 +24,7 @@ class DashboardController < ApplicationController
     RestClient.post('http://api.semaphore.co/api/sms',
     {
       api:     'MxKN8TTCvSgzJa5zBdqE',
-      number:  '09056020114',
+      number:  '09102819266',
       message: 'Go to your nearest health center to know what\'s is the latest announcement. ',
       from:    'MyTarlacApp'
     })

@@ -193,37 +193,51 @@ hospitals = [
 	{
 		name: "Poblacion RHU",
 		rhu_code: "Anao 1",
-		address: "Anao, Tarlac, Philippines"
+		address: "Anao, Tarlac, Philippines",
+		contact_number: "0910394285910",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 	},
 	{
 		name: "Baguindoc BHS",
 		rhu_code: "Anao 1",
-		address: "Anao, Tarlac, Philippines"
+		address: "Anao, Tarlac, Philippines",
+		contact_number: "0910394285910",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 	},
 	{
 		name: "Dapdap RHU 1",
 		rhu_code: "Bamban 1",
-		address: "San Roque, Bamban, Tarlac, Philippines"
+		address: "San Roque, Bamban, Tarlac, Philippines",
+		contact_number: "09181214728",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 	},
 	{
 		name: "Banaba BHS",
 		rhu_code: "Bamban 1",
-		address: "San Roque, Bamban, Tarlac, Philippines"
+		address: "San Roque, Bamban, Tarlac, Philippines",
+		contact_number: "09218392048",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 	},
 	{
 		name: "Pagasa BHS",
 		rhu_code: "Bamban 1",
 		address: "Anupul, Bamban, Tarlac, Philippines",
+		contact_number: "09102847157",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 	},
 	{
 		name: "Lourdes BHS",
 		rhu_code: "Bamban 1",
-		address: "San Roque, Bamban, Tarlac, Philippines"
+		address: "San Roque, Bamban, Tarlac, Philippines",
+		contact_number: "09293018394",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 	},
 	{
 		name: "Poblacion H RHU 1",
 		rhu_code: "Camiling 1",
-		address: "Camiling, Tarlac, Philippines"
+		address: "Camiling, Tarlac, Philippines",
+		contact_number: "09382049184",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 	}
 ]
 
@@ -321,6 +335,8 @@ hospitals.each do |hospital|
 	new_hospital.name 			= hospital[:name]
 	new_hospital.rhu_code 		= hospital[:rhu_code]
 	new_hospital.address 		= hospital[:address]
+	new_hospital.contact_number = hospital[:contact_number]
+	new_hospital.description	= hospital[:description]
 
 	if new_hospital.save
 		print "!"
