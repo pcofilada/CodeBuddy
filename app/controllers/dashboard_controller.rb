@@ -29,4 +29,8 @@ class DashboardController < ApplicationController
       from:    'MyTarlacApp'
     })
   end
+
+  def report
+    send_file '/home/pcofilada/1stQuarterReport.xlsx', :type => 'text/csv'
+  end
 end

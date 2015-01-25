@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   	resources :announcements
     get 'export'
     get 'notify'
+    get 'report'
   end
 
   mount API => '/'
