@@ -24,6 +24,12 @@ $(document).ready(function(){
 		$('.logout').toggle();
 	});
 
+	$('.notify-sms').on('click', function(){
+		setTimeout(function(){
+			alert('SMS Notification Sent!');
+		},3000);
+	});
+
 	var data = {
 	    labels: ["January", "February", "March", "April", "May", "June", "July"],
 	    datasets: [
