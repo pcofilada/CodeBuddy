@@ -241,6 +241,76 @@ hospitals = [
 	}
 ]
 
+histories = [
+	{
+		consultation_date: "2015-01-20",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 2
+	},
+	{
+		consultation_date: "2015-01-22",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 2
+	},
+	{
+		consultation_date: "2015-01-23",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 2
+	},
+	{
+		consultation_date: "2015-01-25",
+		doctor_name: "Dr. Dela Cruz",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 2
+	},
+	{
+		consultation_date: "2015-01-20",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 3
+	},
+	{
+		consultation_date: "2015-01-22",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 3
+	},
+	{
+		consultation_date: "2015-01-23",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 3
+	},
+	{
+		consultation_date: "2015-01-25",
+		doctor_name: "Dr. Dela Cruz",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 3
+	},
+		{
+		consultation_date: "2015-01-22",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 4
+	},
+	{
+		consultation_date: "2015-01-23",
+		doctor_name: "Dr. Reyes",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 4
+	},
+	{
+		consultation_date: "2015-01-25",
+		doctor_name: "Dr. Dela Cruz",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		user_id: 4
+	}
+]
+
+
 puts "\n**********Adding Users**********"
 users.each do |user|
 	new_user = User.new
@@ -342,6 +412,23 @@ hospitals.each do |hospital|
 		print "!"
 	else
 		puts new_hospital.errors.inspect
+    	break
+	end
+end
+
+puts "\n**********Adding Consultation History**********"
+histories.each do |history|
+	new_history = ConsultationHistory.new
+
+	new_history.consultation_date 			= history[:consultation_date]
+	new_history.doctor_name 				= history[:doctor_name]
+	new_history.description					= history[:description]
+	new_history.user_id 					= history[:user_id]
+
+	if new_history.save
+		print "!"
+	else
+		puts new_history.errors.inspect
     	break
 	end
 end
